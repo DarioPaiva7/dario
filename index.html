@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dario Paiva · Psicoterapia online</title>
-<meta name="description" content="Consultas de psicoterapia individual online para adultos. Um espaço seguro, confidencial e sem julgamentos.">
+<title>Dario Paiva · Consulta de psicologia online</title>
+<meta name="description" content="Consultas de psicologia individual online para adultos. Um espaço seguro, confidencial e sem julgamentos.">
 <style>
 :root{
   box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
@@ -29,7 +29,7 @@ nav ul a{color:var(--muted);text-decoration:none}
 nav ul a:hover{color:var(--accent)}
 .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font:600 15px system-ui,sans-serif}
 .btn.alt{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
-.hero{padding:4.5rem 0 3.5rem}
+.hero{padding-top:4.5rem;padding-bottom:3.5rem}
 .hero p.lead{font-size:1.2rem;color:var(--muted);max-width:620px}
 .cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem}
 section{padding:3.5rem 0;border-top:1px solid var(--line)}
@@ -50,7 +50,7 @@ footer{border-top:1px solid var(--line);padding:2rem 0;font:14px/1.6 system-ui,s
 .tl .when{font:600 13px system-ui,sans-serif;color:var(--accent);letter-spacing:.04em}
 .tl h3{font-size:1.05rem;margin:.1em 0 .2em}
 .tl p{margin:0;color:var(--muted);font-size:.97rem}
-@media(max-width:640px){.about{grid-template-columns:1fr}nav ul{display:none}.hero{padding:3rem 0 2.5rem}}
+@media(max-width:640px){.about{grid-template-columns:1fr}nav ul{display:none}.hero{padding-top:3rem;padding-bottom:2.5rem}}
 
 :root{--accent2:#d98f6c;--accent2-soft:#f6e3d8;--grad:linear-gradient(135deg,var(--accent),var(--accent2))}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent2:#e3a281;--accent2-soft:#3a2d27}}
@@ -85,6 +85,34 @@ section:nth-of-type(even){background:linear-gradient(180deg,transparent,var(--so
 html.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 html.js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.blob{animation:none}html.js .rv{opacity:1;transform:none;transition:none}.card,.btn{transition:none}}
+
+:root{--pride:linear-gradient(90deg,var(--accent),var(--accent2))}
+header:after{content:"";display:block;height:3px;background:var(--pride);opacity:.85}
+.logo:before{content:"";display:inline-block;width:.6em;height:.6em;border-radius:50%;background:var(--pride);margin-right:.5em;vertical-align:.05em}
+.grad{background:none;color:inherit;-webkit-text-fill-color:currentColor;background-image:var(--pride);background-repeat:no-repeat;background-size:100% .22em;background-position:0 96%;padding-bottom:.05em}
+.pill{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.4rem .95rem;font:14px system-ui,sans-serif;color:var(--muted);margin:0 0 1.3rem}
+.pill:before{content:"";width:.7rem;height:.7rem;border-radius:50%;background:var(--pride)}
+footer{position:relative}
+footer:before{content:"";position:absolute;left:0;right:0;top:-1px;height:3px;background:var(--pride);opacity:.85}
+
+:root{--bg:#f5f7f7;--surface:#fdfefe;--text:#262f32;--muted:#5f6d71;--accent:#52747c;--accent-ink:#ffffff;--line:#e0e7e7;--soft:#eaf0f0;--accent2:#73908a;--accent2-soft:#e6eeeb}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151c1e;--surface:#1c2427;--text:#e8eeef;--muted:#a2b0b4;--accent:#8fb1b9;--accent-ink:#10191c;--line:#2b373a;--soft:#212b2e;--accent2:#9bb7ae;--accent2-soft:#25302d}}
+:root[data-theme="dark"]{--bg:#151c1e;--surface:#1c2427;--text:#e8eeef;--muted:#a2b0b4;--accent:#8fb1b9;--accent-ink:#10191c;--line:#2b373a;--soft:#212b2e;--accent2:#9bb7ae;--accent2-soft:#25302d}
+:root{--grad:linear-gradient(var(--accent),var(--accent))}
+.blob{opacity:.08;animation:none}
+.btn{box-shadow:none}.btn:hover{box-shadow:none;transform:none;opacity:.9}
+header:after{height:2px;opacity:.35}footer:before{height:2px;opacity:.35}
+.grad{background-size:100% .1em;background-position:0 98%}
+.photo{box-shadow:none;border:1px solid var(--line)}
+.card:hover{transform:none;box-shadow:none}
+.tl li:before{box-shadow:none}
+.pill:before{background:var(--accent)}
+.logo:before{background:var(--accent)}
+.contact{background:var(--soft)}
+
+:root{--bg:#f7f5f0;--surface:#fdfcf9;--text:#2b2f2c;--muted:#5f6862;--accent:#5a7d6e;--accent-ink:#ffffff;--line:#e5e0d6;--soft:#ebf0ec;--accent2:#a58f78;--accent2-soft:#f1e9e0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1e1c;--surface:#222724;--text:#ecebe6;--muted:#a9b1ab;--accent:#8fb2a2;--accent-ink:#13201a;--line:#333a36;--soft:#26302b;--accent2:#c3a78e;--accent2-soft:#332c26}}
+:root[data-theme="dark"]{--bg:#1a1e1c;--surface:#222724;--text:#ecebe6;--muted:#a9b1ab;--accent:#8fb2a2;--accent-ink:#13201a;--line:#333a36;--soft:#26302b;--accent2:#c3a78e;--accent2-soft:#332c26}
 </style>
 </head>
 <body>
@@ -96,9 +124,10 @@ html.js .rv.in{opacity:1;transform:none}
 
 <main id="topo">
 <div class="herowrap"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><div class="wrap hero">
-  <p style="font:600 14px system-ui,sans-serif;color:var(--accent);letter-spacing:.08em;text-transform:uppercase">Psicoterapia online</p>
+  <p class="pill">Espaço afirmativo e inclusivo para pessoas LGBTQIA+</p>
+  <p style="font:600 14px system-ui,sans-serif;color:var(--accent);letter-spacing:.08em;text-transform:uppercase">Consulta de psicologia online</p>
   <h1>Um espaço <span class="grad">seguro</span> para se ouvir e se compreender.</h1>
-  <p class="lead">Psicoterapia integrativa para adultos que atravessam momentos difíceis ou que querem simplesmente conhecer-se melhor, com respeito, confidencialidade e sem julgamentos.</p>
+  <p class="lead">Consulta de psicologia integrativa para adultos que atravessam momentos difíceis ou que querem simplesmente conhecer-se melhor, com respeito, confidencialidade e sem julgamentos.</p>
   <div class="cta"><a class="btn" href="#contacto">Marcar primeira consulta</a><a class="btn alt" href="#sobre">Conhecer-me melhor</a></div>
 </div></div>
 
@@ -106,7 +135,7 @@ html.js .rv.in{opacity:1;transform:none}
   <div class="photo">[A sua fotografia]</div>
   <div>
     <h2>Sobre mim</h2>
-    <p>Sou Dario Paiva, psicólogo e psicoterapeuta, com cédula profissional n.º 029733 da Ordem dos Psicólogos Portugueses. Trabalho exclusivamente com adultos, numa abordagem integrativa: combino diferentes modelos terapêuticos de acordo com a pessoa, a sua história e aquilo que procura mudar.</p>
+    <p>Sou Dario Paiva, psicólogo, com cédula profissional n.º 029733 da Ordem dos Psicólogos Portugueses. Trabalho exclusivamente com adultos, numa abordagem integrativa: combino diferentes modelos terapêuticos de acordo com a pessoa, a sua história e aquilo que procura mudar.</p>
     <p>Acredito que a mudança nasce de uma relação terapêutica de confiança. O meu trabalho é acompanhá-lo/a ao seu ritmo, com escuta atenta e métodos com apoio na evidência.</p>
     <div class="grid">
       <div class="card"><span class="ico">🧠</span><h3>CBT</h3><p>Terapia cognitivo-comportamental: identificar e modificar pensamentos e comportamentos que mantêm o sofrimento.</p></div>
@@ -119,8 +148,8 @@ html.js .rv.in{opacity:1;transform:none}
   <h2>Formação e experiência</h2>
   <h3 style="margin-top:1.4rem;color:var(--muted);font:600 13px system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase">Experiência clínica</h3>
   <ul class="tl">
-    <li><span class="when">Até à atualidade</span><h3>Colaborador · APsi-UMinho</h3><p>Acompanhamento de processos de psicoterapia na consulta de perturbações emocionais.</p></li>
-    <li><span class="when">Set. 2024 – Dez. 2024</span><h3>Bolsa de investigação · CIPsi-UMinho</h3><p>Acompanhamento e monitorização de processos de psicoterapia em curso e colaboração na introdução de um sistema de feedback de processo em psicoterapia.</p></li>
+    <li><span class="when">Até à atualidade</span><h3>Colaborador · APsi-UMinho</h3><p>Acompanhamento de processos na consulta de psicologia para perturbações emocionais.</p></li>
+    <li><span class="when">Set. 2024 – Dez. 2024</span><h3>Bolsa de investigação · CIPsi-UMinho</h3><p>Acompanhamento e monitorização de processos em curso na consulta de psicologia e colaboração na introdução de um sistema de feedback de processo em consulta de psicologia.</p></li>
     <li><span class="when">Jan. 2023 – Jan. 2024</span><h3>Estágio profissional em Psicologia Clínica com adultos · APsi-UMinho</h3><p>Terapia individual em co-terapia com terapeutas sénior e, depois, em terapia cognitivo-comportamental de 20 sessões. Coordenação de sessões semanais de prática deliberada em CBT para estagiários.</p></li>
     <li><span class="when">Ago. 2022 – Nov. 2022</span><h3>Projeto Prometeu · Universidade do Minho</h3><p>Triagens e atendimento breve (8 sessões) a estudantes do primeiro ano com dificuldades de adaptação, conteúdos psicoeducativos e workshops de redução de estigma em saúde mental.</p></li>
     <li><span class="when">Set. 2021 – Mar. 2022</span><h3>Estágio curricular em Psicologia Clínica com adultos · APsi-UMinho</h3><p>Treino em competências de intervenção em terapia cognitivo-comportamental, em entrevistas de avaliação clínica e supervisão semanal de casos.</p></li>
@@ -141,7 +170,8 @@ html.js .rv.in{opacity:1;transform:none}
     <div class="card"><span class="ico">🌧️</span><h3>Tristeza e depressão</h3><p>Falta de energia, desânimo, perda de interesse ou sensação de vazio.</p></div>
     <div class="card"><span class="ico">🤝</span><h3>Relações</h3><p>Conflitos, dependência emocional, separações ou dificuldades de comunicação.</p></div>
     <div class="card"><span class="ico">🌱</span><h3>Autoestima</h3><p>Autocrítica excessiva, perfeccionismo e insegurança em várias áreas da vida.</p></div>
-    <div class="card"><span class="ico">🕊️</span><h3>Luto e perdas</h3><p>Acompanhamento em momentos de perda, mudança ou transição de vida.</p></div>
+    <div class="card"><span class="ico">🧭</span><h3>Identidade e orientação</h3><p>Exploração da orientação sexual e da identidade de género, saída do armário e vivências de estigma, num espaço afirmativo.</p></div>
+  <div class="card"><span class="ico">🕊️</span><h3>Luto e perdas</h3><p>Acompanhamento em momentos de perda, mudança ou transição de vida.</p></div>
     <div class="card"><span class="ico">🔋</span><h3>Burnout</h3><p>Esgotamento profissional e dificuldade em equilibrar trabalho e vida pessoal.</p></div>
   </div>
 </div></section>
@@ -172,7 +202,7 @@ html.js .rv.in{opacity:1;transform:none}
 </div></section>
 </main>
 
-<footer><div class="wrap">© 2026 Dario Paiva · Psicólogo · Cédula n.º 029733 OPP · <a href="#topo">Voltar ao topo</a></div></footer>
+<footer><div class="wrap">© 2026 Dario Paiva · Psicólogo · Cédula n.º 029733 OPP · Prática afirmativa e inclusiva · <a href="#topo">Voltar ao topo</a></div></footer>
 <script>
 document.documentElement.classList.add('js');
 (function(){
