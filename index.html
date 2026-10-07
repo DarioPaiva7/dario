@@ -113,13 +113,89 @@ header:after{height:2px;opacity:.35}footer:before{height:2px;opacity:.35}
 :root{--bg:#f7f5f0;--surface:#fdfcf9;--text:#2b2f2c;--muted:#5f6862;--accent:#5a7d6e;--accent-ink:#ffffff;--line:#e5e0d6;--soft:#ebf0ec;--accent2:#a58f78;--accent2-soft:#f1e9e0}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1e1c;--surface:#222724;--text:#ecebe6;--muted:#a9b1ab;--accent:#8fb2a2;--accent-ink:#13201a;--line:#333a36;--soft:#26302b;--accent2:#c3a78e;--accent2-soft:#332c26}}
 :root[data-theme="dark"]{--bg:#1a1e1c;--surface:#222724;--text:#ecebe6;--muted:#a9b1ab;--accent:#8fb2a2;--accent-ink:#13201a;--line:#333a36;--soft:#26302b;--accent2:#c3a78e;--accent2-soft:#332c26}
+
+:root{--accent2:#cc8660;--accent2-soft:#f6e4d8;--accent2-ink:#a95c36;--grad:linear-gradient(135deg,var(--accent),var(--accent) 55%,var(--accent2))}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent2:#e3a281;--accent2-soft:#3a2d27;--accent2-ink:#e8ae90}}
+:root[data-theme="dark"]{--accent2:#e3a281;--accent2-soft:#3a2d27;--accent2-ink:#e8ae90}
+.blob{opacity:.14}.b2{background:var(--accent2)}.b1{background:var(--accent)}.b3{background:var(--accent2-soft);opacity:.5}
+header:after,footer:before{opacity:.75}
+.pill:before,.logo:before{background:var(--accent2)}
+.grad{background-image:linear-gradient(90deg,var(--accent2),var(--accent2))}
+.btn:hover{opacity:1;transform:translateY(-2px)}
+.btn.alt{color:var(--accent2-ink);border-color:var(--accent2)}
+nav ul a:hover{color:var(--accent2-ink)}
+.card:hover{border-color:var(--accent2)}
+.ico{background:var(--accent2-soft)}
+.num{background:var(--accent2);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .num{color:#2a160c}}
+:root[data-theme="dark"] .num{color:#2a160c}
+.tl{border-left-color:var(--accent2)}
+.tl li:before{background:var(--accent2);box-shadow:0 0 0 4px var(--accent2-soft)}
+.tl .when{color:var(--accent2-ink)}
+.photo{background:var(--grad);box-shadow:10px 10px 0 var(--accent2-soft);border:none}
+.band .box{background:var(--grad)}
+.contact{background:linear-gradient(135deg,var(--soft),var(--accent2-soft))}
+section.band{background:none}
+.hero{padding-top:2rem;padding-bottom:3rem}
+.hero h1{margin-top:0}
+@media(max-width:640px){.hero{padding-top:1.25rem;padding-bottom:2rem}}
+html.js .rv{opacity:1!important;transform:none!important;transition:none!important}
+
+.tlink{color:var(--accent);font:600 15px system-ui,sans-serif;text-decoration:none;padding:.8rem .4rem}
+.tlink:hover{text-decoration:underline}
+.micro{font:14px system-ui,sans-serif;color:var(--muted);margin:1rem 0 0}
+.req{display:grid;grid-template-columns:1fr 1.15fr;gap:2.2rem;align-items:start}
+.req-intro p{color:var(--muted)}
+.ticks{list-style:none;padding:0;margin:1.2rem 0}
+.ticks li{position:relative;padding-left:1.7rem;margin-bottom:.7rem;font:15px/1.5 system-ui,sans-serif}
+.ticks li:before{content:"✓";position:absolute;left:0;color:var(--accent2-ink);font-weight:700}
+.auth{font:600 14px system-ui,sans-serif;color:var(--text)!important}
+.req-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.5rem;scroll-margin-top:5rem}
+.prog{height:5px;background:var(--soft);border-radius:9px;overflow:hidden}
+.prog i{display:block;height:100%;width:33%;background:var(--accent2);transition:width .35s}
+.stepn{font:600 13px system-ui,sans-serif;color:var(--muted);margin:.7rem 0 1rem;letter-spacing:.04em}
+.pane h3{font-size:1.25rem;outline:none}
+.hint{font:14px/1.5 system-ui,sans-serif;color:var(--muted);margin:0 0 .9rem}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.chip span{display:inline-block;min-height:44px;padding:.65rem 1rem;border:1.5px solid var(--line);border-radius:999px;font:15px/1.3 system-ui,sans-serif;background:var(--bg);color:var(--text);transition:all .15s}
+.chip:hover span{border-color:var(--accent)}
+.chip input:checked+span{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.chip input:focus-visible+span{outline:3px solid var(--accent2);outline-offset:2px}
+.row{display:flex;gap:.7rem;margin-top:1.4rem;align-items:center}
+.row .btn{border:1.5px solid var(--accent);cursor:pointer;min-height:46px}
+.row .btn.alt{background:transparent;color:var(--accent)}
+.fld{display:block;font:600 14px system-ui,sans-serif;margin-bottom:1rem}
+.fld input{display:block;width:100%;margin-top:.4rem;padding:.8rem 1rem;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);font:16px system-ui,sans-serif}
+.fld input:focus{outline:3px solid var(--accent2);border-color:transparent}
+.err{color:#b04a3a;font:14px system-ui,sans-serif;margin:0 0 .8rem}
+:root[data-theme="dark"] .err{color:#e8917f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .err{color:#e8917f}}
+.faq details{border-bottom:1px solid var(--line);padding:.9rem 0}
+.faq summary{cursor:pointer;font-weight:600;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";float:right;color:var(--accent2-ink)}
+.faq details[open] summary:after{content:"–"}
+.faq p{margin:.6rem 0 0;color:var(--muted);font-size:.97rem}
+.stick{display:none}
+@media(max-width:760px){.req{grid-template-columns:1fr}}
+@media(max-width:640px){
+ .stick{display:block;position:fixed;left:0;right:0;bottom:0;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--bg) 92%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid var(--line);z-index:6;transition:transform .25s}
+ .stick .btn{display:block;text-align:center}
+ .stick.off{transform:translateY(110%)}
+ body{padding-bottom:5rem}
+}
+html{scroll-padding-top:calc(3rem + env(safe-area-inset-top,0px))}
+section[id]{scroll-margin-top:0}
+.req-card{scroll-margin-top:6rem}
 </style>
 </head>
 <body>
 <header><div class="wrap"><nav>
   <a class="logo" href="#topo">Dario Paiva</a>
   <ul><li><a href="#sobre">Sobre mim</a></li><li><a href="#experiencia">Experiência</a></li><li><a href="#ajuda">Como posso ajudar</a></li><li><a href="#sessoes">Sessões</a></li><li><a href="#contacto">Contacto</a></li></ul>
-  <a class="btn" href="#contacto">Marcar consulta</a>
+  <a class="btn" href="#contacto">Pedir consulta</a>
 </nav></div></header>
 
 <main id="topo">
@@ -128,7 +204,8 @@ header:after{height:2px;opacity:.35}footer:before{height:2px;opacity:.35}
   <p style="font:600 14px system-ui,sans-serif;color:var(--accent);letter-spacing:.08em;text-transform:uppercase">Consulta de psicologia online</p>
   <h1>Um espaço <span class="grad">seguro</span> para se ouvir e se compreender.</h1>
   <p class="lead">Consulta de psicologia integrativa para adultos que atravessam momentos difíceis ou que querem simplesmente conhecer-se melhor, com respeito, confidencialidade e sem julgamentos.</p>
-  <div class="cta"><a class="btn" href="#contacto">Marcar primeira consulta</a><a class="btn alt" href="#sobre">Conhecer-me melhor</a></div>
+  <div class="cta"><a class="btn" href="#contacto">Pedir consulta · demora 1 minuto</a><a class="tlink" href="#sobre">Conhecer-me melhor →</a></div>
+  <p class="micro">Sem compromisso · Resposta em 24 a 48 horas úteis · 100% online</p>
 </div></div>
 
 <section id="sobre"><div class="wrap about">
@@ -180,24 +257,74 @@ header:after{height:2px;opacity:.35}footer:before{height:2px;opacity:.35}
   <h2>Como funcionam as sessões</h2>
   <div class="grid">
     <div class="card"><div class="num">1</div><h3>Primeira consulta</h3><p>Conversamos sobre o que o/a trouxe até aqui e definimos juntos o que pretende trabalhar.</p></div>
-    <div class="card"><div class="num">2</div><h3>Acompanhamento</h3><p>Sessões semanais ou quinzenais de 60 minutos, por videochamada, a partir de onde se sentir mais confortável.</p></div>
+    <div class="card"><div class="num">2</div><h3>Acompanhamento</h3><p>Sessões semanais ou quinzenais de 60 minutos, por videochamada na plataforma doxy.me, a partir de onde se sentir mais confortável.</p></div>
     <div class="card"><div class="num">3</div><h3>Avaliação do caminho</h3><p>Revemos regularmente os progressos e ajustamos o processo às suas necessidades.</p></div>
   </div>
-  <p class="note"><strong>Honorários:</strong> 40 € por sessão. Existem vagas sociais a 25 € por sessão. Todas as consultas são confidenciais.</p>
+  <p class="note"><strong>Preços:</strong> 40 € por sessão. Existem vagas sociais a 25 € por sessão. Todas as consultas são confidenciais.</p>
+  <h3 style="margin-top:2.4rem">Privacidade e confidencialidade online</h3>
+  <p style="color:var(--muted);max-width:640px">As consultas decorrem na plataforma <strong>doxy.me</strong>, uma plataforma de telessaúde pensada para proteger a privacidade de quem a usa.</p>
+  <div class="grid">
+    <div class="card"><span class="ico">🔒</span><h3>Comunicação encriptada</h3><p>O vídeo e o áudio da consulta são encriptados, o que protege a conversa durante a ligação.</p></div>
+    <div class="card"><span class="ico">🛡️</span><h3>Proteção de dados</h3><p>A plataforma declara cumprir o RGPD e outras normas de proteção de dados de saúde.</p></div>
+    <div class="card"><span class="ico">🙋</span><h3>Sem conta nem registo</h3><p>Não precisa de criar conta nem de partilhar dados pessoais para entrar na consulta.</p></div>
+    <div class="card"><span class="ico">💻</span><h3>Sem instalar nada</h3><p>Funciona no navegador, no computador ou no telemóvel. Basta clicar na ligação que lhe envio.</p></div>
+    <div class="card"><span class="ico">🚪</span><h3>Sala de espera privada</h3><p>Entra numa sala de espera virtual e a consulta só começa quando eu o/a admito.</p></div>
+  </div>
+  <p class="note">Para proteger ainda mais a sua privacidade, sugiro que escolha um local reservado e uma ligação de internet segura, evitando redes wi-fi públicas.</p>
 </div></section>
 
-<section class="band"><div class="wrap"><div class="box rv"><h2>Dar o primeiro passo já é um começo.</h2><p>Se sente que chegou o momento de falar com alguém, estou disponível para o ouvir, ao seu ritmo.</p><a class="btn" href="#contacto">Marcar primeira consulta</a></div></div></section>
-
 <section id="contacto"><div class="wrap">
-  <h2>Contacto</h2>
-  <div class="contact">
-    <p>Dê o primeiro passo: respondo normalmente em 24 a 48 horas úteis.</p>
-    <p><strong>Email:</strong> <a href="mailto:dariopaiva7@gmail.com">dariopaiva7@gmail.com</a></p>
-    <p><strong>Telefone / WhatsApp:</strong> <a href="tel:+351913129675">+351 913 129 675</a></p>
-    <p><strong>Atendimento:</strong> exclusivamente online, por videochamada</p>
-    <p><strong>Horário:</strong> das 10h às 19h</p>
-    <div class="cta"><a class="btn" href="mailto:dariopaiva7@gmail.com?subject=Marcação%20de%20consulta">Enviar email</a></div>
+  <div class="req">
+    <div class="req-intro">
+      <h2>Pedir consulta</h2>
+      <p>Dar o primeiro passo costuma ser a parte mais difícil, e já o está a fazer. Demora cerca de um minuto e não o/a compromete a nada.</p>
+      <ul class="ticks"><li>Não precisa de explicar tudo agora</li><li>Respondo em 24 a 48 horas úteis com horários disponíveis</li><li>A primeira conversa serve para nos conhecermos e decidirmos juntos como continuar</li></ul>
+      <p class="auth">Dario Paiva · Psicólogo · Cédula n.º 029733 OPP</p>
+    </div>
+    <div class="req-card" id="pedido">
+      <div class="prog" aria-hidden="true"><i id="bar"></i></div>
+      <p class="stepn" id="stepn" aria-live="polite">Passo 1 de 3</p>
+      <div class="pane" data-step="1">
+        <h3 tabindex="-1">O que o/a traz aqui?</h3>
+        <p class="hint">Escolha o que mais se aproxima, pode escolher vários. Não precisa de ser exato.</p>
+        <div class="chips"><label class="chip"><input type="checkbox" name="motivo" value="Ansiedade ou stress"><span>Ansiedade ou stress</span></label><label class="chip"><input type="checkbox" name="motivo" value="Tristeza ou desânimo"><span>Tristeza ou desânimo</span></label><label class="chip"><input type="checkbox" name="motivo" value="Relações"><span>Relações</span></label><label class="chip"><input type="checkbox" name="motivo" value="Autoestima"><span>Autoestima</span></label><label class="chip"><input type="checkbox" name="motivo" value="Luto ou perdas"><span>Luto ou perdas</span></label><label class="chip"><input type="checkbox" name="motivo" value="Cansaço extremo (burnout)"><span>Cansaço extremo (burnout)</span></label><label class="chip"><input type="checkbox" name="motivo" value="Experiências difíceis do passado"><span>Experiências difíceis do passado</span></label><label class="chip"><input type="checkbox" name="motivo" value="Identidade ou orientação"><span>Identidade ou orientação</span></label><label class="chip"><input type="checkbox" name="motivo" value="Ainda não sei bem"><span>Ainda não sei bem</span></label></div>
+        <div class="row"><button type="button" class="btn" data-next>Continuar</button></div>
+      </div>
+      <div class="pane" data-step="2" hidden>
+        <h3 tabindex="-1">Quando lhe dá mais jeito?</h3>
+        <p class="hint">Sessões de 60 minutos, por videochamada. Pode escolher mais do que uma opção.</p>
+        <div class="chips"><label class="chip"><input type="checkbox" name="hora" value="Manhã (10h–13h)"><span>Manhã (10h–13h)</span></label><label class="chip"><input type="checkbox" name="hora" value="Início da tarde (13h–16h)"><span>Início da tarde (13h–16h)</span></label><label class="chip"><input type="checkbox" name="hora" value="Fim da tarde (16h–19h)"><span>Fim da tarde (16h–19h)</span></label><label class="chip"><input type="checkbox" name="hora" value="Sou flexível"><span>Sou flexível</span></label></div>
+        <p class="hint" style="margin-top:1.1rem">Preço (opcional)</p>
+        <div class="chips"><label class="chip"><input type="radio" name="preco" value="Valor normal · 40 €"><span>Valor normal · 40 €</span></label><label class="chip"><input type="radio" name="preco" value="Vaga social · 25 €"><span>Vaga social · 25 €</span></label><label class="chip"><input type="radio" name="preco" value="Prefiro falar sobre isto"><span>Prefiro falar sobre isto</span></label></div>
+        <div class="row"><button type="button" class="btn alt" data-prev>Voltar</button><button type="button" class="btn" data-next>Continuar</button></div>
+      </div>
+      <div class="pane" data-step="3" hidden>
+        <h3 tabindex="-1">Como o/a posso contactar?</h3>
+        <label class="fld">Primeiro nome<input id="f-nome" type="text" autocomplete="given-name" placeholder="Como gosta de ser tratado/a"></label>
+        <label class="fld">Email ou telemóvel<input id="f-contacto" type="text" autocomplete="email" placeholder="O que preferir"></label>
+        <p class="err" id="err" role="alert" hidden>Falta só indicar o seu contacto, para eu poder responder.</p>
+        <p class="hint">Por favor, não escreva aqui detalhes clínicos sensíveis. Falamos disso em consulta, num espaço mais privado.</p>
+        <div class="row"><button type="button" class="btn alt" data-prev>Voltar</button><button type="button" class="btn" id="send">Enviar pedido</button></div>
+      </div>
+      <div class="pane" data-step="4" hidden>
+        <h3 tabindex="-1">Quase lá! ✔</h3>
+        <p>Abri o seu email com o pedido já escrito. Só falta carregar em <strong>Enviar</strong>.</p>
+        <div class="row" style="flex-wrap:wrap"><a class="btn alt" id="gm" target="_blank" rel="noopener">Abrir no Gmail</a><button type="button" class="btn alt" id="cp">Copiar mensagem</button><a class="btn alt" href="tel:+351913129675">Ligar</a></div>
+        <p class="hint" id="cpok" hidden>Mensagem copiada. Pode colar no seu email para dariopaiva7@gmail.com.</p>
+        <p class="hint" style="margin-top:1.2rem"><strong>O que acontece a seguir:</strong> 1) recebo o seu pedido; 2) respondo em 24 a 48 horas úteis com horários; 3) fazemos a primeira consulta por videochamada.</p>
+      </div>
+    </div>
   </div>
+
+  <h3 style="margin-top:2.6rem">Perguntas frequentes</h3>
+  <div class="faq">
+    <details><summary>E se eu não souber o que dizer na primeira consulta?</summary><p>Não faz mal. Conduzo a conversa e vamos ao seu ritmo, a primeira consulta serve para nos conhecermos.</p></details>
+    <details><summary>Preciso de ter um problema "grave" para pedir consulta?</summary><p>Não. Muitas pessoas procuram acompanhamento psicológico para se sentirem melhor e se conhecerem, e não apenas em momentos de crise.</p></details>
+    <details><summary>Fico obrigado/a a continuar depois da primeira consulta?</summary><p>Não. A primeira consulta ajuda a perceber se faz sentido avançarmos e a decisão é sempre sua.</p></details>
+    <details><summary>A consulta online é mesmo privada?</summary><p>Sim, as consultas decorrem na plataforma doxy.me, sem instalar nada. <a href="#sessoes">Veja como protejo a sua privacidade</a>.</p></details>
+  </div>
+
+  <p class="note" style="margin-top:2rem"><strong>Prefere falar diretamente?</strong> Telefone: <a href="tel:+351913129675">+351 913 129 675</a> · Email: <a href="mailto:dariopaiva7@gmail.com">dariopaiva7@gmail.com</a> · Horário: das 10h às 19h · Atendimento exclusivamente online.</p>
   <p class="note"><strong>Em situação de crise ou risco de vida:</strong> ligue 112, a Linha 1411 (linha nacional de prevenção do suicídio) ou a linha SNS 24 (808 24 24 24, opção de saúde mental). Este site não substitui apoio de emergência.</p>
 </div></section>
 </main>
@@ -212,6 +339,33 @@ if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add(
 var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
 els.forEach(function(e){io.observe(e)});
 document.querySelectorAll('.band .rv').forEach(function(e){io.observe(e)});
+})();
+</script>
+<div class="stick" id="stick"><a class="btn" href="#contacto">Pedir consulta · 1 minuto</a></div>
+<script>
+(function(){
+var card=document.getElementById('pedido'),panes=card.querySelectorAll('.pane'),bar=document.getElementById('bar'),sn=document.getElementById('stepn'),cur=1;
+function go(n){cur=n;panes.forEach(function(p){p.hidden=(+p.dataset.step!==n)});
+ bar.style.width=(Math.min(n,3)/3*100)+'%';sn.textContent=n<4?'Passo '+n+' de 3':'Concluído';
+ var h=card.querySelector('.pane[data-step="'+n+'"] h3');if(h){h.focus({preventScroll:true})}
+ card.scrollIntoView({block:'nearest',behavior:'smooth'})}
+card.addEventListener('click',function(e){var t=e.target;
+ if(t.hasAttribute&&t.hasAttribute('data-next'))go(cur+1);
+ if(t.hasAttribute&&t.hasAttribute('data-prev'))go(cur-1)});
+function vals(n){return Array.prototype.map.call(card.querySelectorAll('input[name="'+n+'"]:checked'),function(i){return i.value})}
+function msg(){var nome=document.getElementById('f-nome').value.trim(),c=document.getElementById('f-contacto').value.trim(),m=vals('motivo'),h=vals('hora'),p=vals('preco');
+ return 'Olá Dario,\n\nGostaria de pedir uma consulta de psicologia.\n\nNome: '+(nome||'(não indicado)')+'\nContacto: '+c+'\nO que me traz: '+(m.length?m.join(', '):'(não indicado)')+'\nHorário preferido: '+(h.length?h.join(', '):'(não indicado)')+(p.length?'\nPreço: '+p[0]:'')+'\n\nObrigado/a.'}
+document.getElementById('send').addEventListener('click',function(){
+ var c=document.getElementById('f-contacto').value.trim(),err=document.getElementById('err');
+ if(!c){err.hidden=false;document.getElementById('f-contacto').focus();return}
+ err.hidden=true;var body=msg(),sub='Pedido de consulta de psicologia';
+ document.getElementById('gm').href='https://mail.google.com/mail/?view=cm&to=dariopaiva7@gmail.com&su='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);
+ go(4);
+ window.location.href='mailto:dariopaiva7@gmail.com?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body)});
+document.getElementById('cp').addEventListener('click',function(){
+ var t=msg();try{navigator.clipboard.writeText(t).then(function(){document.getElementById('cpok').hidden=false})}catch(e){window.prompt('Copie a mensagem:',t)}});
+var st=document.getElementById('stick'),ct=document.getElementById('contacto');
+if(st&&ct&&'IntersectionObserver' in window){new IntersectionObserver(function(en){st.classList.toggle('off',en[0].isIntersecting)},{threshold:.15}).observe(ct)}
 })();
 </script>
 </body>
