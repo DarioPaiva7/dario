@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dario Paiva · Consulta de psicologia online</title>
 <meta name="description" content="Consultas de psicologia individual online para adultos. Um espaço seguro, confidencial e sem julgamentos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
   box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
@@ -189,23 +190,122 @@ html.js .rv{opacity:1!important;transform:none!important;transition:none!importa
 html{scroll-padding-top:calc(3rem + env(safe-area-inset-top,0px))}
 section[id]{scroll-margin-top:0}
 .req-card{scroll-margin-top:6rem}
+
+:root{--serif:Lora,Georgia,"Times New Roman",serif;
+--bg:#f6f1e8;--surface:#fbf8f2;--text:#36312b;--muted:#6a6258;--accent:#557160;--accent-ink:#ffffff;--line:#e3dacb;--soft:#ece4d6;--accent2:#b9714f;--accent2-soft:#f0ddd0;--accent2-ink:#985735;
+--grad:linear-gradient(var(--accent),var(--accent));--pride:linear-gradient(var(--accent2),var(--accent2))}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f1b17;--surface:#272220;--text:#eee6da;--muted:#b3a999;--accent:#9dbba8;--accent-ink:#17211b;--line:#3a332c;--soft:#2c2621;--accent2:#d99b78;--accent2-soft:#3a2d25;--accent2-ink:#e2a888}}
+:root[data-theme="dark"]{--bg:#1f1b17;--surface:#272220;--text:#eee6da;--muted:#b3a999;--accent:#9dbba8;--accent-ink:#17211b;--line:#3a332c;--soft:#2c2621;--accent2:#d99b78;--accent2-soft:#3a2d25;--accent2-ink:#e2a888}
+body,body *{font-family:var(--serif)!important}
+body{font-size:18px;line-height:1.7;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .35 0 0 0 0 .3 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+h1,h2,h3{font-weight:600;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,6vw,3.9rem);line-height:1.1;max-width:14em}
+h2{font-size:clamp(1.7rem,3.8vw,2.3rem)}
+header{background:var(--bg);-webkit-backdrop-filter:none;backdrop-filter:none}
+header:after,footer:before,.logo:before,.pill,.blob{display:none!important}
+nav ul{font-size:16px}
+.logo{font-size:1.25rem;font-style:italic;font-weight:600}
+.eyebrow{font-style:italic;color:var(--accent2-ink);margin:0 0 .8rem;font-size:1.05rem}
+.hero p.lead{font-size:1.3rem;max-width:34rem;color:var(--text)}
+.grad{font-style:italic;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M0 5 Q12 0 25 4 T50 4 T75 4 T100 3' fill='none' stroke='%23b9714f' stroke-width='2.4' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");background-size:100% .3em;background-position:0 100%;background-repeat:no-repeat;padding-bottom:.12em}
+.btn{border-radius:10px;font-size:16px;font-weight:600;box-shadow:none;background:var(--accent)}
+.btn:hover{transform:none;opacity:.92}
+.btn.alt{border-radius:10px}
+.tlink{font-size:16px;font-style:italic}
+.micro{font-size:15px;font-style:italic}
+section{border-top:1px solid var(--line);background:none!important}
+.card,.card:hover{background:none;border:none;border-left:2px solid var(--accent2);border-radius:0;padding:.2rem 0 .2rem 1.1rem;transform:none;box-shadow:none}
+.card h3{font-size:1.15rem}
+.card p{font-size:1rem}
+.ico{display:none}
+.grid{gap:1.6rem 2.4rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.num{background:none;color:var(--accent2);width:auto;height:auto;font-size:2.4rem;font-style:italic;font-weight:400;line-height:1;margin-bottom:.3rem;display:block}
+:root[data-theme="dark"] .num{color:var(--accent2)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .num{color:var(--accent2)}}
+.about{grid-template-columns:230px 1fr;gap:2.6rem}
+.photo{width:230px;height:300px;border-radius:999px 999px 16px 16px;background:var(--soft);color:var(--muted);font-style:italic;border:1px solid var(--line);box-shadow:none}
+.tl{border-left:1px solid var(--accent2)}
+.tl li:before{width:9px;height:9px;left:-5px;box-shadow:none;background:var(--accent2)}
+.tl .when{font-style:italic;font-size:15px;letter-spacing:0}
+.tl h3{font-size:1.1rem}
+.ticks li:before{content:"–"}
+.req-card{border-radius:14px;background:var(--surface);box-shadow:0 2px 0 var(--line)}
+.prog{height:3px}
+.stepn{letter-spacing:0;font-style:italic;font-size:15px}
+.chip span{border-radius:10px;font-size:16px}
+.fld{font-size:15px}
+.fld input{border-radius:10px;font-size:17px}
+.contact{background:var(--soft)!important;border:none}
+.faq summary{font-size:1.05rem}
+.stick{border-top:1px solid var(--line)}
+footer{font-size:15px;font-style:italic}
+@media(max-width:640px){.about{grid-template-columns:1fr}.photo{margin:0 auto}h1{font-size:2.3rem}body{font-size:17px}}
+
+:root{--sage-soft:#e1e9df;--mustard:#cf9f45;--mustard-soft:#f6ead0;--rose:#c58585;--rose-soft:#f3dedb;--deep:#3d5747;--deep-ink:#f6efe3;--cta:#a85f3e;--cta-ink:#ffffff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--sage-soft:#25302a;--mustard:#e0b565;--mustard-soft:#332e1e;--rose:#d79a9a;--rose-soft:#372a2a;--deep:#1a2a20;--deep-ink:#f0e9dc;--cta:#d99b78;--cta-ink:#2a160c}}
+:root[data-theme="dark"]{--sage-soft:#25302a;--mustard:#e0b565;--mustard-soft:#332e1e;--rose:#d79a9a;--rose-soft:#372a2a;--deep:#1a2a20;--deep-ink:#f0e9dc;--cta:#d99b78;--cta-ink:#2a160c}
+section{border-top:none!important}
+.herowrap{background:radial-gradient(circle at 88% 18%,var(--accent2-soft) 0 170px,transparent 171px),radial-gradient(circle at 96% 70%,var(--mustard-soft) 0 70px,transparent 71px),radial-gradient(circle at 6% 92%,var(--sage-soft) 0 130px,transparent 131px)}
+#sobre{background:var(--sage-soft)!important}
+#ajuda{background:var(--mustard-soft)!important}
+#sessoes{background:none!important}
+#experiencia{background:none}
+h2:after{content:"";display:block;width:64px;height:7px;margin-top:.55rem;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 7'%3E%3Cpath d='M1 4 Q9 0 17 4 T33 4 T49 4 T63 3' fill='none' stroke='%23b9714f' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat}
+.btn{background:var(--cta);color:var(--cta-ink)}
+.btn.alt{background:transparent;color:var(--accent2-ink);border-color:var(--cta)}
+.card:nth-child(4n+1){border-left-color:var(--accent2)}
+.card:nth-child(4n+2){border-left-color:var(--accent)}
+.card:nth-child(4n+3){border-left-color:var(--mustard)}
+.card:nth-child(4n+4){border-left-color:var(--rose)}
+.grid .card:nth-child(4n+1) .num,.grid .card:nth-child(4n+1) h3{color:var(--accent2-ink)}
+.grid .card:nth-child(4n+2) .num{color:var(--accent)}
+.grid .card:nth-child(4n+3) .num{color:var(--mustard)}
+.tl li:nth-child(3n+1):before{background:var(--accent2)}
+.tl li:nth-child(3n+2):before{background:var(--accent)}
+.tl li:nth-child(3n+3):before{background:var(--mustard)}
+.tl li:nth-child(3n+2) .when{color:var(--accent)}
+.tl li:nth-child(3n+3) .when{color:var(--mustard)}
+.photo{background:var(--accent2-soft);border:none;box-shadow:10px 10px 0 var(--mustard-soft)}
+.chip input:checked+span{background:var(--accent);border-color:var(--accent)}
+#contacto{background:var(--deep);color:var(--deep-ink)}
+#contacto h2:after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 7'%3E%3Cpath d='M1 4 Q9 0 17 4 T33 4 T49 4 T63 3' fill='none' stroke='%23e0b565' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E")}
+#contacto .req-intro p,#contacto .note,#contacto .faq p{color:var(--deep-ink);opacity:.9}
+#contacto .auth{color:var(--deep-ink)!important}
+#contacto .ticks li:before{color:var(--mustard)}
+#contacto a:not(.btn){color:#f0c987}
+#contacto .faq details{border-bottom-color:rgba(255,255,255,.2)}
+#contacto .faq summary:after{color:#f0c987}
+#contacto .req-card{color:var(--text)}
+#contacto .req-card .hint,#contacto .req-card p{color:var(--muted);opacity:1}
+#contacto .req-card strong{color:var(--text)}
+#contacto .req-card a:not(.btn){color:var(--accent2-ink)}
+footer{background:var(--accent2-soft);border-top:none}
+.stick{background:var(--bg)}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;margin:2.2rem 0 .6rem}
+.price{background:var(--surface);border:2px solid var(--accent2);border-radius:16px;padding:1.4rem 1.5rem;text-align:center}
+.price.alt{border-color:var(--accent)}
+.pl{display:block;font-size:1.05rem;color:var(--muted);font-style:italic}
+.pv{display:block;font-size:3rem;line-height:1.1;font-weight:600;color:var(--accent2-ink);margin:.2rem 0}
+.price.alt .pv{color:var(--accent)}
+.pd{display:block;font-size:.97rem;color:var(--muted)}
+#precos{scroll-margin-top:5.5rem}
 </style>
 </head>
 <body>
 <header><div class="wrap"><nav>
   <a class="logo" href="#topo">Dario Paiva</a>
-  <ul><li><a href="#sobre">Sobre mim</a></li><li><a href="#experiencia">Experiência</a></li><li><a href="#ajuda">Como posso ajudar</a></li><li><a href="#sessoes">Sessões</a></li><li><a href="#contacto">Contacto</a></li></ul>
+  <ul><li><a href="#sobre">Sobre mim</a></li><li><a href="#experiencia">Experiência</a></li><li><a href="#ajuda">Como posso ajudar</a></li><li><a href="#sessoes">Sessões</a></li><li><a href="#precos">Preços</a></li><li><a href="#contacto">Contacto</a></li></ul>
   <a class="btn" href="#contacto">Pedir consulta</a>
 </nav></div></header>
 
 <main id="topo">
 <div class="herowrap"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><div class="wrap hero">
   <p class="pill">Espaço afirmativo e inclusivo para pessoas LGBTQIA+</p>
-  <p style="font:600 14px system-ui,sans-serif;color:var(--accent);letter-spacing:.08em;text-transform:uppercase">Consulta de psicologia online</p>
+  <p class="eyebrow">consulta de psicologia online, para adultos</p>
   <h1>Um espaço <span class="grad">seguro</span> para se ouvir e se compreender.</h1>
-  <p class="lead">Consulta de psicologia integrativa para adultos que atravessam momentos difíceis ou que querem simplesmente conhecer-se melhor, com respeito, confidencialidade e sem julgamentos.</p>
+  <p class="lead">Sou o Dario, psicólogo. Acompanho adultos que atravessam momentos difíceis, ou que simplesmente querem conhecer-se melhor, com respeito, confidencialidade e sem julgamentos.</p>
   <div class="cta"><a class="btn" href="#contacto">Pedir consulta · demora 1 minuto</a><a class="tlink" href="#sobre">Conhecer-me melhor →</a></div>
-  <p class="micro">Sem compromisso · Resposta em 24 a 48 horas úteis · 100% online</p>
+  <p class="micro">Sem compromisso · Sessões online de 60 min a 40 € (vagas sociais a 25 €) · Resposta em 24 a 48 horas úteis</p>
 </div></div>
 
 <section id="sobre"><div class="wrap about">
@@ -237,11 +337,17 @@ section[id]{scroll-margin-top:0}
     <li><span class="when">2017 – 2022</span><h3>Mestrado Integrado em Psicologia</h3><p>Universidade do Minho, Braga</p></li>
     <li><span class="when">2019 / 2020</span><h3>Curso de Formação Pedagógica Inicial de Formadores</h3><p>Instituto CRIAP</p></li>
   </ul>
+  <h3 style="margin-top:1rem;color:var(--muted);font-size:13px;letter-spacing:.08em;text-transform:uppercase">Artigos publicados</h3>
+  <ul class="tl">
+    <li><span class="when">Fevereiro 2025 · Brain Sciences</span><h3>Speech Stream Composition Affects Statistical Learning: Behavioral and Neural Evidence</h3><p>Soares, A. P., <strong>Paiva, D.</strong>, Lema, A., Pereira, D. R., Rodrigues, A. C., &amp; Oliveira, H. M. · Estudo com dados comportamentais e de EEG que mostra que a aprendizagem de padrões na fala é favorecida quando a fala tem um nível moderado de previsibilidade, nem demasiado previsível nem demasiado imprevisível. <a href="https://doi.org/10.3390/brainsci15020198" target="_blank" rel="noopener">Ler o artigo (acesso aberto) →</a> · <a href="https://www.preprints.org/manuscript/202501.0151" target="_blank" rel="noopener">Versão preprint (janeiro 2025)</a></p></li>
+    <li><span class="when">Setembro 2024 · Clinical Psychology in Europe</span><h3>Developing a European Psychotherapy Consortium (EPoC): Towards adopting a single-item self-report outcome measure across European countries</h3><p>Gonçalves, M. M., Lutz, W., Schwartz, B., Oliveira, J. T., Saarni, S. E., Tishby, O., Rubel, J. A., Boehnke, J. R., Montesano, A., &amp; <strong>Paiva, D.</strong> · Descreve a criação de um consórcio europeu para recolher dados sobre os resultados da psicoterapia e a adoção de uma medida simples, de um só item, para acompanhar a evolução dos pacientes em vários países. <a href="https://doi.org/10.32872/cpe.13827" target="_blank" rel="noopener">Ler o artigo (acesso aberto) →</a></p></li>
+      <li><span class="when">Setembro 2024 · Comunicação em congresso</span><h3>Assessing and understanding the interplay between ambivalence and resistance in psychotherapy</h3><p>Oliveira, J. T., &amp; <strong>Paiva, D.</strong> · 6th Joint European &amp; UK SPR Chapters Conference, Brno, República Checa · Apresenta um estudo com 50 pacientes em psicoterapia sobre a forma como a ambivalência e a resistência à mudança se influenciam de sessão para sessão e se relacionam com o mal-estar psicológico. <a href="https://www.researchgate.net/publication/384805185_Assessing_and_understanding_the_interplay_between_ambivalence_and_resistance_in_psychotherapy" target="_blank" rel="noopener">Ver no ResearchGate →</a></p></li>
+  </ul>
 </div></section>
 
 <section id="ajuda"><div class="wrap">
   <h2>Como posso ajudar</h2>
-  <p style="color:var(--muted)">Alguns dos motivos mais frequentes que levam as pessoas à terapia.</p>
+  <p style="color:var(--muted)">Estas são algumas das razões que levam as pessoas a procurar consulta. Se não se reconhece em nenhuma, não faz mal: podemos descobrir juntos o problema que o/a motiva a procurar terapia.</p>
   <div class="grid">
     <div class="card"><span class="ico">🌬️</span><h3>Ansiedade e stress</h3><p>Preocupação constante, tensão, dificuldade em desligar ou ataques de pânico.</p></div>
     <div class="card"><span class="ico">🌧️</span><h3>Tristeza e depressão</h3><p>Falta de energia, desânimo, perda de interesse ou sensação de vazio.</p></div>
@@ -260,7 +366,10 @@ section[id]{scroll-margin-top:0}
     <div class="card"><div class="num">2</div><h3>Acompanhamento</h3><p>Sessões semanais ou quinzenais de 60 minutos, por videochamada na plataforma doxy.me, a partir de onde se sentir mais confortável.</p></div>
     <div class="card"><div class="num">3</div><h3>Avaliação do caminho</h3><p>Revemos regularmente os progressos e ajustamos o processo às suas necessidades.</p></div>
   </div>
-  <p class="note"><strong>Preços:</strong> 40 € por sessão. Existem vagas sociais a 25 € por sessão. Todas as consultas são confidenciais.</p>
+  <div id="precos" class="prices">
+    <div class="price"><span class="pl">Sessão individual</span><span class="pv">40 €</span><span class="pd">60 minutos · online</span></div>
+    <div class="price alt"><span class="pl">Vaga social</span><span class="pv">25 €</span><span class="pd">Para quem tem dificuldades financeiras. Basta dizê-lo no pedido de consulta.</span></div>
+  </div>
   <h3 style="margin-top:2.4rem">Privacidade e confidencialidade online</h3>
   <p style="color:var(--muted);max-width:640px">As consultas decorrem na plataforma <strong>doxy.me</strong>, uma plataforma de telessaúde pensada para proteger a privacidade de quem a usa.</p>
   <div class="grid">
@@ -270,7 +379,7 @@ section[id]{scroll-margin-top:0}
     <div class="card"><span class="ico">💻</span><h3>Sem instalar nada</h3><p>Funciona no navegador, no computador ou no telemóvel. Basta clicar na ligação que lhe envio.</p></div>
     <div class="card"><span class="ico">🚪</span><h3>Sala de espera privada</h3><p>Entra numa sala de espera virtual e a consulta só começa quando eu o/a admito.</p></div>
   </div>
-  <p class="note">Para proteger ainda mais a sua privacidade, sugiro que escolha um local reservado e uma ligação de internet segura, evitando redes wi-fi públicas.</p>
+  <p class="note">Para proteger ainda mais a sua privacidade, sugiro que escolha um local reservado e uma ligação de internet segura, e que evite redes wi-fi públicas.</p>
 </div></section>
 
 <section id="contacto"><div class="wrap">
@@ -301,9 +410,10 @@ section[id]{scroll-margin-top:0}
       <div class="pane" data-step="3" hidden>
         <h3 tabindex="-1">Como o/a posso contactar?</h3>
         <label class="fld">Primeiro nome<input id="f-nome" type="text" autocomplete="given-name" placeholder="Como gosta de ser tratado/a"></label>
-        <label class="fld">Email ou telemóvel<input id="f-contacto" type="text" autocomplete="email" placeholder="O que preferir"></label>
-        <p class="err" id="err" role="alert" hidden>Falta só indicar o seu contacto, para eu poder responder.</p>
-        <p class="hint">Por favor, não escreva aqui detalhes clínicos sensíveis. Falamos disso em consulta, num espaço mais privado.</p>
+        <label class="fld">Telemóvel (obrigatório)<input id="f-tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="Ex.: 912 345 678"></label>
+        <label class="fld">Email (opcional)<input id="f-email" type="email" inputmode="email" autocomplete="email" placeholder="o.seu@email.com"></label>
+        <p class="err" id="err" role="alert" hidden>Indique um número de telemóvel válido, para eu poder contactá-lo/a.</p>
+        <p class="hint">O telemóvel permite-me contactá-lo/a para confirmar o horário. Por favor, não escreva aqui detalhes clínicos sensíveis. Falamos disso em consulta, num espaço mais privado.</p>
         <div class="row"><button type="button" class="btn alt" data-prev>Voltar</button><button type="button" class="btn" id="send">Enviar pedido</button></div>
       </div>
       <div class="pane" data-step="4" hidden>
@@ -318,10 +428,18 @@ section[id]{scroll-margin-top:0}
 
   <h3 style="margin-top:2.6rem">Perguntas frequentes</h3>
   <div class="faq">
-    <details><summary>E se eu não souber o que dizer na primeira consulta?</summary><p>Não faz mal. Conduzo a conversa e vamos ao seu ritmo, a primeira consulta serve para nos conhecermos.</p></details>
     <details><summary>Preciso de ter um problema "grave" para pedir consulta?</summary><p>Não. Muitas pessoas procuram acompanhamento psicológico para se sentirem melhor e se conhecerem, e não apenas em momentos de crise.</p></details>
-    <details><summary>Fico obrigado/a a continuar depois da primeira consulta?</summary><p>Não. A primeira consulta ajuda a perceber se faz sentido avançarmos e a decisão é sempre sua.</p></details>
+    <details><summary>E se eu não souber o que dizer na primeira consulta?</summary><p>Não faz mal. É muito natural sentir alguma confusão no início, e muitas pessoas não sabem bem explicar o que sentem ou qual é, de facto, o problema. Conduzo a conversa e vamos ao seu ritmo: a primeira consulta serve para nos conhecermos e, aos poucos, percebermos juntos o que se passa.</p></details>
+    <details><summary>Ir ao psicólogo é sinal de fraqueza?</summary><p>Pelo contrário. Pedir ajuda é uma decisão ativa e de cuidado consigo. As pessoas procuram acompanhamento psicológico por muitas razões, desde momentos difíceis a vontade de se conhecerem melhor, e isso não tem nada a ver com "estar maluco/a".</p></details>
+    <details><summary>Não consigo resolver isto sozinho/a?</summary><p>Muitas pessoas tentam primeiro resolver sozinhas, e isso mostra força. Mas ter alguém de fora, com formação, a ajudá-lo/a a ver o que sozinho/a é difícil de ver, pode facilitar muito o caminho. Não precisa de esgotar todas as tentativas antes de pedir ajuda.</p></details>
+    <details><summary>Qual é a diferença entre falar com um psicólogo e falar com um amigo?</summary><p>Os amigos ouvem e aconselham com carinho, mas também têm a sua opinião e a sua história connosco. Na consulta, o espaço é inteiramente seu: ouço sem julgar, com sigilo profissional e com métodos que têm apoio científico, orientados para os seus objetivos.</p></details>
+    <details><summary>Tenho de falar de tudo logo à primeira?</summary><p>Não. Vamos ao seu ritmo e não tem de contar nada que não queira ou não se sinta pronto/a para partilhar. É normal emocionar-se ou haver temas mais difíceis, e podemos fazer pausas sempre que precisar.</p></details>
+    <details><summary>As consultas online funcionam tão bem como as presenciais?</summary><p>Para muitas situações, os estudos mostram resultados semelhantes aos da consulta presencial. Muita gente até se sente mais à vontade a falar a partir de casa. O mais importante é a relação de confiança que construímos, e isso acontece também por videochamada.</p></details>
     <details><summary>A consulta online é mesmo privada?</summary><p>Sim, as consultas decorrem na plataforma doxy.me, sem instalar nada. <a href="#sessoes">Veja como protejo a sua privacidade</a>.</p></details>
+    <details><summary>O que partilho na consulta fica confidencial?</summary><p>Sim. Tudo o que partilhar está protegido pelo sigilo profissional. Só em situações excecionais previstas na lei e no código deontológico, como um risco grave para si ou para outras pessoas, poderia ser necessário quebrar o sigilo. Se tiver dúvidas, falamos disso logo na primeira consulta.</p></details>
+    <details><summary>O psicólogo receita medicação?</summary><p>Não. Sou psicólogo e trabalho através da conversa e de técnicas psicológicas, não prescrevo medicação. Se, em algum momento, fizer sentido uma avaliação médica, falamos disso e articulamos com o seu médico, se assim o desejar.</p></details>
+    <details><summary>Quantas sessões vou precisar?</summary><p>Depende do que o/a trouxe e dos seus objetivos, por isso não há um número igual para todos. Na primeira consulta falamos sobre isso e vamos rever o caminho juntos ao longo do processo.</p></details>
+    <details><summary>Quanto custa e há alternativas se for difícil pagar?</summary><p>A sessão custa 40 €. Para quem tem dificuldades financeiras, existem vagas sociais a 25 € por sessão. Se o custo for uma preocupação, pode dizê-lo no pedido de consulta ou falar comigo diretamente.</p></details>
   </div>
 
   <p class="note" style="margin-top:2rem"><strong>Prefere falar diretamente?</strong> Telefone: <a href="tel:+351913129675">+351 913 129 675</a> · Email: <a href="mailto:dariopaiva7@gmail.com">dariopaiva7@gmail.com</a> · Horário: das 10h às 19h · Atendimento exclusivamente online.</p>
@@ -353,11 +471,11 @@ card.addEventListener('click',function(e){var t=e.target;
  if(t.hasAttribute&&t.hasAttribute('data-next'))go(cur+1);
  if(t.hasAttribute&&t.hasAttribute('data-prev'))go(cur-1)});
 function vals(n){return Array.prototype.map.call(card.querySelectorAll('input[name="'+n+'"]:checked'),function(i){return i.value})}
-function msg(){var nome=document.getElementById('f-nome').value.trim(),c=document.getElementById('f-contacto').value.trim(),m=vals('motivo'),h=vals('hora'),p=vals('preco');
- return 'Olá Dario,\n\nGostaria de pedir uma consulta de psicologia.\n\nNome: '+(nome||'(não indicado)')+'\nContacto: '+c+'\nO que me traz: '+(m.length?m.join(', '):'(não indicado)')+'\nHorário preferido: '+(h.length?h.join(', '):'(não indicado)')+(p.length?'\nPreço: '+p[0]:'')+'\n\nObrigado/a.'}
+function msg(){var nome=document.getElementById('f-nome').value.trim(),tel=document.getElementById('f-tel').value.trim(),em=document.getElementById('f-email').value.trim(),m=vals('motivo'),h=vals('hora'),p=vals('preco');
+ return 'Olá Dario,\n\nGostaria de pedir uma consulta de psicologia.\n\nNome: '+(nome||'(não indicado)')+(tel?'\nTelemóvel: '+tel:'')+(em?'\nEmail: '+em:'')+'\nO que me traz: '+(m.length?m.join(', '):'(não indicado)')+'\nHorário preferido: '+(h.length?h.join(', '):'(não indicado)')+(p.length?'\nPreço: '+p[0]:'')+'\n\nObrigado/a.'}
 document.getElementById('send').addEventListener('click',function(){
- var c=document.getElementById('f-contacto').value.trim(),err=document.getElementById('err');
- if(!c){err.hidden=false;document.getElementById('f-contacto').focus();return}
+ var tel=document.getElementById('f-tel').value.trim(),em=document.getElementById('f-email').value.trim(),err=document.getElementById('err');
+ if(tel.replace(/\D/g,'').length<9){err.hidden=false;document.getElementById('f-tel').focus();return}
  err.hidden=true;var body=msg(),sub='Pedido de consulta de psicologia';
  document.getElementById('gm').href='https://mail.google.com/mail/?view=cm&to=dariopaiva7@gmail.com&su='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);
  go(4);
