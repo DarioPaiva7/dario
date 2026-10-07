@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dario Paiva · Psicoterapia online</title>
+<meta name="description" content="Consultas de psicoterapia individual online para adultos. Um espaço seguro, confidencial e sem julgamentos.">
+<style>
+:root{
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f7f4ef;--surface:#fffdf9;--text:#2b2f2c;--muted:#5f6862;--accent:#4f7a6a;--accent-ink:#fff;--line:#e3ddd2;--soft:#e8efe9;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1e1c;--surface:#222724;--text:#ecebe6;--muted:#a9b1ab;--accent:#8fbba9;--accent-ink:#13201a;--line:#333a36;--soft:#26302b}}
+:root[data-theme="dark"]{--bg:#1a1e1c;--surface:#222724;--text:#ecebe6;--muted:#a9b1ab;--accent:#8fbba9;--accent-ink:#13201a;--line:#333a36;--soft:#26302b}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 Georgia,"Times New Roman",serif}
+h1,h2,h3{line-height:1.2;font-weight:600;margin:0 0 .6em}
+h1{font-size:clamp(2rem,5vw,3.2rem)}
+h2{font-size:clamp(1.6rem,3.5vw,2.1rem)}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+.wrap{max-width:1000px;margin:0 auto;padding:0 1.25rem}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0;flex-wrap:wrap}
+.logo{font-weight:700;text-decoration:none;color:var(--text);font-size:1.1rem}
+nav ul{display:flex;gap:1.2rem;list-style:none;margin:0;padding:0;font:15px system-ui,sans-serif}
+nav ul a{color:var(--muted);text-decoration:none}
+nav ul a:hover{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font:600 15px system-ui,sans-serif}
+.btn.alt{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+.hero{padding:4.5rem 0 3.5rem}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:620px}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.1rem;margin-top:1.4rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.3rem}
+.card h3{font-size:1.1rem;margin-bottom:.4em}
+.card p{margin:0;color:var(--muted);font-size:.97rem}
+.about{display:grid;grid-template-columns:200px 1fr;gap:2rem;align-items:start}
+.photo{width:200px;height:240px;border-radius:14px;background:var(--soft);display:flex;align-items:center;justify-content:center;color:var(--muted);font:14px system-ui,sans-serif;text-align:center;padding:1rem}
+.num{font:700 1.4rem system-ui,sans-serif;color:var(--accent)}
+.contact{background:var(--soft);border-radius:18px;padding:2rem;margin-top:1rem}
+.contact p{margin-bottom:.4em}
+.note{font:14px/1.5 system-ui,sans-serif;color:var(--muted);margin-top:1.4rem}
+footer{border-top:1px solid var(--line);padding:2rem 0;font:14px/1.6 system-ui,sans-serif;color:var(--muted)}
+.tl{list-style:none;margin:1.4rem 0 0;padding:0;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 1.4rem 1.4rem}
+.tl li:before{content:"";position:absolute;left:-7px;top:.5rem;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.tl .when{font:600 13px system-ui,sans-serif;color:var(--accent);letter-spacing:.04em}
+.tl h3{font-size:1.05rem;margin:.1em 0 .2em}
+.tl p{margin:0;color:var(--muted);font-size:.97rem}
+@media(max-width:640px){.about{grid-template-columns:1fr}nav ul{display:none}.hero{padding:3rem 0 2.5rem}}
+
+:root{--accent2:#d98f6c;--accent2-soft:#f6e3d8;--grad:linear-gradient(135deg,var(--accent),var(--accent2))}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent2:#e3a281;--accent2-soft:#3a2d27}}
+:root[data-theme="dark"]{--accent2:#e3a281;--accent2-soft:#3a2d27}
+body{overflow-x:hidden}
+header{background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.btn{background:var(--grad);transition:transform .2s,box-shadow .2s;box-shadow:0 6px 18px -8px var(--accent)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -8px var(--accent)}
+.btn.alt{background:transparent;box-shadow:none}
+.herowrap{position:relative;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.45;z-index:0;animation:float 14s ease-in-out infinite}
+.b1{width:340px;height:340px;background:var(--accent);top:-80px;right:-60px}
+.b2{width:280px;height:280px;background:var(--accent2);bottom:-90px;left:-70px;animation-delay:-5s}
+.b3{width:180px;height:180px;background:var(--soft);top:40%;left:45%;animation-delay:-9s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(24px,-28px) scale(1.08)}}
+.hero{position:relative;z-index:1}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.card{transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 14px 28px -16px var(--accent)}
+.ico{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:14px;background:var(--accent2-soft);font-size:1.4rem;margin-bottom:.7rem}
+.num{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--grad);color:var(--accent-ink);font-size:1.1rem;margin-bottom:.6rem}
+.photo{background:var(--grad);color:var(--accent-ink);box-shadow:12px 12px 0 var(--accent2-soft)}
+section:nth-of-type(even){background:linear-gradient(180deg,transparent,var(--soft) 140%)}
+.tl{border-left-color:var(--accent2)}
+.tl li:before{background:var(--grad);box-shadow:0 0 0 4px var(--accent2-soft)}
+.band{border-top:none;padding:3rem 0}
+.band .box{background:var(--grad);color:var(--accent-ink);border-radius:22px;padding:2.4rem 1.6rem;text-align:center}
+.band h2{margin-bottom:.4em}
+.band p{max-width:560px;margin:0 auto 1.3rem;opacity:.95}
+.band .btn{background:var(--surface);color:var(--text);box-shadow:none}
+.contact{border:1px solid var(--line);background:linear-gradient(135deg,var(--soft),var(--accent2-soft))}
+html.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+html.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.blob{animation:none}html.js .rv{opacity:1;transform:none;transition:none}.card,.btn{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="logo" href="#topo">Dario Paiva</a>
+  <ul><li><a href="#sobre">Sobre mim</a></li><li><a href="#experiencia">Experiência</a></li><li><a href="#ajuda">Como posso ajudar</a></li><li><a href="#sessoes">Sessões</a></li><li><a href="#contacto">Contacto</a></li></ul>
+  <a class="btn" href="#contacto">Marcar consulta</a>
+</nav></div></header>
+
+<main id="topo">
+<div class="herowrap"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><div class="wrap hero">
+  <p style="font:600 14px system-ui,sans-serif;color:var(--accent);letter-spacing:.08em;text-transform:uppercase">Psicoterapia online</p>
+  <h1>Um espaço <span class="grad">seguro</span> para se ouvir e se compreender.</h1>
+  <p class="lead">Psicoterapia integrativa para adultos que atravessam momentos difíceis ou que querem simplesmente conhecer-se melhor, com respeito, confidencialidade e sem julgamentos.</p>
+  <div class="cta"><a class="btn" href="#contacto">Marcar primeira consulta</a><a class="btn alt" href="#sobre">Conhecer-me melhor</a></div>
+</div></div>
+
+<section id="sobre"><div class="wrap about">
+  <div class="photo">[A sua fotografia]</div>
+  <div>
+    <h2>Sobre mim</h2>
+    <p>Sou Dario Paiva, psicólogo e psicoterapeuta, com cédula profissional n.º 029733 da Ordem dos Psicólogos Portugueses. Trabalho exclusivamente com adultos, numa abordagem integrativa: combino diferentes modelos terapêuticos de acordo com a pessoa, a sua história e aquilo que procura mudar.</p>
+    <p>Acredito que a mudança nasce de uma relação terapêutica de confiança. O meu trabalho é acompanhá-lo/a ao seu ritmo, com escuta atenta e métodos com apoio na evidência.</p>
+    <div class="grid">
+      <div class="card"><span class="ico">🧠</span><h3>CBT</h3><p>Terapia cognitivo-comportamental: identificar e modificar pensamentos e comportamentos que mantêm o sofrimento.</p></div>
+      <div class="card"><span class="ico">👁️</span><h3>EMDR</h3><p>Abordagem focada no processamento de memórias difíceis e experiências traumáticas.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="experiencia"><div class="wrap">
+  <h2>Formação e experiência</h2>
+  <h3 style="margin-top:1.4rem;color:var(--muted);font:600 13px system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase">Experiência clínica</h3>
+  <ul class="tl">
+    <li><span class="when">Até à atualidade</span><h3>Colaborador · APsi-UMinho</h3><p>Acompanhamento de processos de psicoterapia na consulta de perturbações emocionais.</p></li>
+    <li><span class="when">Set. 2024 – Dez. 2024</span><h3>Bolsa de investigação · CIPsi-UMinho</h3><p>Acompanhamento e monitorização de processos de psicoterapia em curso e colaboração na introdução de um sistema de feedback de processo em psicoterapia.</p></li>
+    <li><span class="when">Jan. 2023 – Jan. 2024</span><h3>Estágio profissional em Psicologia Clínica com adultos · APsi-UMinho</h3><p>Terapia individual em co-terapia com terapeutas sénior e, depois, em terapia cognitivo-comportamental de 20 sessões. Coordenação de sessões semanais de prática deliberada em CBT para estagiários.</p></li>
+    <li><span class="when">Ago. 2022 – Nov. 2022</span><h3>Projeto Prometeu · Universidade do Minho</h3><p>Triagens e atendimento breve (8 sessões) a estudantes do primeiro ano com dificuldades de adaptação, conteúdos psicoeducativos e workshops de redução de estigma em saúde mental.</p></li>
+    <li><span class="when">Set. 2021 – Mar. 2022</span><h3>Estágio curricular em Psicologia Clínica com adultos · APsi-UMinho</h3><p>Treino em competências de intervenção em terapia cognitivo-comportamental, em entrevistas de avaliação clínica e supervisão semanal de casos.</p></li>
+  </ul>
+  <h3 style="margin-top:1rem;color:var(--muted);font:600 13px system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase">Formação</h3>
+  <ul class="tl">
+    <li><span class="when">Abril 2026</span><h3>Formação em EMDR · Nível 1</h3><p>Instituto GO4</p></li>
+    <li><span class="when">2017 – 2022</span><h3>Mestrado Integrado em Psicologia</h3><p>Universidade do Minho, Braga</p></li>
+    <li><span class="when">2019 / 2020</span><h3>Curso de Formação Pedagógica Inicial de Formadores</h3><p>Instituto CRIAP</p></li>
+  </ul>
+</div></section>
+
+<section id="ajuda"><div class="wrap">
+  <h2>Como posso ajudar</h2>
+  <p style="color:var(--muted)">Alguns dos motivos mais frequentes que levam as pessoas à terapia.</p>
+  <div class="grid">
+    <div class="card"><span class="ico">🌬️</span><h3>Ansiedade e stress</h3><p>Preocupação constante, tensão, dificuldade em desligar ou ataques de pânico.</p></div>
+    <div class="card"><span class="ico">🌧️</span><h3>Tristeza e depressão</h3><p>Falta de energia, desânimo, perda de interesse ou sensação de vazio.</p></div>
+    <div class="card"><span class="ico">🤝</span><h3>Relações</h3><p>Conflitos, dependência emocional, separações ou dificuldades de comunicação.</p></div>
+    <div class="card"><span class="ico">🌱</span><h3>Autoestima</h3><p>Autocrítica excessiva, perfeccionismo e insegurança em várias áreas da vida.</p></div>
+    <div class="card"><span class="ico">🕊️</span><h3>Luto e perdas</h3><p>Acompanhamento em momentos de perda, mudança ou transição de vida.</p></div>
+    <div class="card"><span class="ico">🔋</span><h3>Burnout</h3><p>Esgotamento profissional e dificuldade em equilibrar trabalho e vida pessoal.</p></div>
+  </div>
+</div></section>
+
+<section id="sessoes"><div class="wrap">
+  <h2>Como funcionam as sessões</h2>
+  <div class="grid">
+    <div class="card"><div class="num">1</div><h3>Primeira consulta</h3><p>Conversamos sobre o que o/a trouxe até aqui e definimos juntos o que pretende trabalhar.</p></div>
+    <div class="card"><div class="num">2</div><h3>Acompanhamento</h3><p>Sessões semanais ou quinzenais de 60 minutos, por videochamada, a partir de onde se sentir mais confortável.</p></div>
+    <div class="card"><div class="num">3</div><h3>Avaliação do caminho</h3><p>Revemos regularmente os progressos e ajustamos o processo às suas necessidades.</p></div>
+  </div>
+  <p class="note"><strong>Honorários:</strong> 40 € por sessão. Existem vagas sociais a 25 € por sessão. Todas as consultas são confidenciais.</p>
+</div></section>
+
+<section class="band"><div class="wrap"><div class="box rv"><h2>Dar o primeiro passo já é um começo.</h2><p>Se sente que chegou o momento de falar com alguém, estou disponível para o ouvir, ao seu ritmo.</p><a class="btn" href="#contacto">Marcar primeira consulta</a></div></div></section>
+
+<section id="contacto"><div class="wrap">
+  <h2>Contacto</h2>
+  <div class="contact">
+    <p>Dê o primeiro passo: respondo normalmente em 24 a 48 horas úteis.</p>
+    <p><strong>Email:</strong> <a href="mailto:dariopaiva7@gmail.com">dariopaiva7@gmail.com</a></p>
+    <p><strong>Telefone / WhatsApp:</strong> <a href="tel:+351913129675">+351 913 129 675</a></p>
+    <p><strong>Atendimento:</strong> exclusivamente online, por videochamada</p>
+    <p><strong>Horário:</strong> das 10h às 19h</p>
+    <div class="cta"><a class="btn" href="mailto:dariopaiva7@gmail.com?subject=Marcação%20de%20consulta">Enviar email</a></div>
+  </div>
+  <p class="note"><strong>Em situação de crise ou risco de vida:</strong> ligue 112, a Linha 1411 (linha nacional de prevenção do suicídio) ou a linha SNS 24 (808 24 24 24, opção de saúde mental). Este site não substitui apoio de emergência.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 Dario Paiva · Psicólogo · Cédula n.º 029733 OPP · <a href="#topo">Voltar ao topo</a></div></footer>
+<script>
+document.documentElement.classList.add('js');
+(function(){
+var els=document.querySelectorAll('.card,.tl li,section h2,.contact,.about>*');
+els.forEach(function(e){e.classList.add('rv')});
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+els.forEach(function(e){io.observe(e)});
+document.querySelectorAll('.band .rv').forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
