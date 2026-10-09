@@ -289,6 +289,15 @@ footer{background:var(--accent2-soft);border-top:none}
 .price.alt .pv{color:var(--accent)}
 .pd{display:block;font-size:.97rem;color:var(--muted)}
 #precos{scroll-margin-top:5.5rem}
+.sos{background:var(--surface);color:var(--text);border:2px solid var(--rose);border-radius:16px;padding:1.6rem;margin-top:2.2rem}
+#contacto .sos h3{margin:0 0 .5rem;color:var(--text)}
+#contacto .sos p{color:var(--text);opacity:1;margin:0 0 1rem}
+#contacto .sos .sosnote{font-size:.92rem;color:var(--muted);margin:1rem 0 0;font-style:italic}
+.soslist{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.8rem}
+#contacto .sos a{display:block;text-decoration:none;background:var(--rose-soft);border-radius:12px;padding:.9rem 1.1rem;color:var(--text)}
+#contacto .sos a:hover{outline:2px solid var(--rose)}
+#contacto .sos a strong{display:block;font-size:1.6rem;line-height:1.2;color:var(--accent2-ink)}
+#contacto .sos a span{font-size:.93rem;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -303,17 +312,17 @@ footer{background:var(--accent2-soft);border-top:none}
   <p class="pill">Espaço afirmativo e inclusivo para pessoas LGBTQIA+</p>
   <p class="eyebrow">consulta de psicologia online, para adultos</p>
   <h1>Um espaço <span class="grad">seguro</span> para se ouvir e se compreender.</h1>
-  <p class="lead">Sou o Dario, psicólogo. Acompanho adultos que atravessam momentos difíceis, ou que simplesmente querem conhecer-se melhor, com respeito, confidencialidade e sem julgamentos.</p>
-  <div class="cta"><a class="btn" href="#contacto">Pedir consulta · demora 1 minuto</a><a class="tlink" href="#sobre">Conhecer-me melhor →</a></div>
-  <p class="micro">Sem compromisso · Sessões online de 60 min a 40 € (vagas sociais a 25 €) · Resposta em 24 a 48 horas úteis</p>
+  <p class="lead">Sou o Dario e sou psicólogo. Acompanho adultos que atravessam momentos difíceis, ou que simplesmente querem conhecer-se melhor, com respeito, confidencialidade e sem julgamentos.</p>
+  <div class="cta"><a class="btn" href="#contacto">Pedir consulta · demora 1 minuto</a><a class="tlink" href="#sobre">Sobre mim →</a></div>
+  <p class="micro">Sem compromisso · Sessões online de 60 min a 45 € (vagas sociais a 30 €) · Resposta em 24 a 48 horas úteis</p>
 </div></div>
 
 <section id="sobre"><div class="wrap about">
   <div class="photo">[A sua fotografia]</div>
   <div>
     <h2>Sobre mim</h2>
-    <p>Sou Dario Paiva, psicólogo, com cédula profissional n.º 029733 da Ordem dos Psicólogos Portugueses. Trabalho exclusivamente com adultos, numa abordagem integrativa: combino diferentes modelos terapêuticos de acordo com a pessoa, a sua história e aquilo que procura mudar.</p>
-    <p>Acredito que a mudança nasce de uma relação terapêutica de confiança. O meu trabalho é acompanhá-lo/a ao seu ritmo, com escuta atenta e métodos com apoio na evidência.</p>
+    <p>Sou psicólogo com cédula profissional n.º 029733 da Ordem dos Psicólogos Portugueses. Trabalho exclusivamente com adultos, numa abordagem integrativa: combino diferentes modelos terapêuticos de acordo com a pessoa, a sua história e aquilo que procura mudar.</p>
+    <p>Acredito que a mudança nasce de uma relação terapêutica de confiança. O meu trabalho é acompanhá-lo/a ao seu ritmo, e utilizar métodos suportados por evidência científica para o/a auxiliar a resolver os seus problemas.</p>
     <div class="grid">
       <div class="card"><span class="ico">🧠</span><h3>CBT</h3><p>Terapia cognitivo-comportamental: identificar e modificar pensamentos e comportamentos que mantêm o sofrimento.</p></div>
       <div class="card"><span class="ico">👁️</span><h3>EMDR</h3><p>Abordagem focada no processamento de memórias difíceis e experiências traumáticas.</p></div>
@@ -367,8 +376,8 @@ footer{background:var(--accent2-soft);border-top:none}
     <div class="card"><div class="num">3</div><h3>Avaliação do caminho</h3><p>Revemos regularmente os progressos e ajustamos o processo às suas necessidades.</p></div>
   </div>
   <div id="precos" class="prices">
-    <div class="price"><span class="pl">Sessão individual</span><span class="pv">40 €</span><span class="pd">60 minutos · online</span></div>
-    <div class="price alt"><span class="pl">Vaga social</span><span class="pv">25 €</span><span class="pd">Para quem tem dificuldades financeiras. Basta dizê-lo no pedido de consulta.</span></div>
+    <div class="price"><span class="pl">Sessão individual</span><span class="pv">45 €</span><span class="pd">60 minutos · online</span></div>
+    <div class="price alt"><span class="pl">Vaga social</span><span class="pv">30 €</span><span class="pd">Para quem tem dificuldades financeiras. As vagas são limitadas.</span></div>
   </div>
   <h3 style="margin-top:2.4rem">Privacidade e confidencialidade online</h3>
   <p style="color:var(--muted);max-width:640px">As consultas decorrem na plataforma <strong>doxy.me</strong>, uma plataforma de telessaúde pensada para proteger a privacidade de quem a usa.</p>
@@ -387,8 +396,8 @@ footer{background:var(--accent2-soft);border-top:none}
     <div class="req-intro">
       <h2>Pedir consulta</h2>
       <p>Dar o primeiro passo costuma ser a parte mais difícil, e já o está a fazer. Demora cerca de um minuto e não o/a compromete a nada.</p>
-      <ul class="ticks"><li>Não precisa de explicar tudo agora</li><li>Respondo em 24 a 48 horas úteis com horários disponíveis</li><li>A primeira conversa serve para nos conhecermos e decidirmos juntos como continuar</li></ul>
-      <p class="auth">Dario Paiva · Psicólogo · Cédula n.º 029733 OPP</p>
+      <ul class="ticks"><li>Respondo em 24 a 48 horas úteis com horários disponíveis</li><li>A primeira conversa serve para nos conhecermos e decidirmos juntos qual é o problema e o que podemos fazer para mudar</li></ul>
+      
     </div>
     <div class="req-card" id="pedido">
       <div class="prog" aria-hidden="true"><i id="bar"></i></div>
@@ -404,7 +413,7 @@ footer{background:var(--accent2-soft);border-top:none}
         <p class="hint">Sessões de 60 minutos, por videochamada. Pode escolher mais do que uma opção.</p>
         <div class="chips"><label class="chip"><input type="checkbox" name="hora" value="Manhã (10h–13h)"><span>Manhã (10h–13h)</span></label><label class="chip"><input type="checkbox" name="hora" value="Início da tarde (13h–16h)"><span>Início da tarde (13h–16h)</span></label><label class="chip"><input type="checkbox" name="hora" value="Fim da tarde (16h–19h)"><span>Fim da tarde (16h–19h)</span></label><label class="chip"><input type="checkbox" name="hora" value="Sou flexível"><span>Sou flexível</span></label></div>
         <p class="hint" style="margin-top:1.1rem">Preço (opcional)</p>
-        <div class="chips"><label class="chip"><input type="radio" name="preco" value="Valor normal · 40 €"><span>Valor normal · 40 €</span></label><label class="chip"><input type="radio" name="preco" value="Vaga social · 25 €"><span>Vaga social · 25 €</span></label><label class="chip"><input type="radio" name="preco" value="Prefiro falar sobre isto"><span>Prefiro falar sobre isto</span></label></div>
+        <div class="chips"><label class="chip"><input type="radio" name="preco" value="Valor normal · 45 €"><span>Valor normal · 45 €</span></label><label class="chip"><input type="radio" name="preco" value="Vaga social · 30 €"><span>Vaga social · 30 €</span></label><label class="chip"><input type="radio" name="preco" value="Prefiro falar sobre isto"><span>Prefiro falar sobre isto</span></label></div>
         <div class="row"><button type="button" class="btn alt" data-prev>Voltar</button><button type="button" class="btn" data-next>Continuar</button></div>
       </div>
       <div class="pane" data-step="3" hidden>
@@ -439,15 +448,24 @@ footer{background:var(--accent2-soft);border-top:none}
     <details><summary>O que partilho na consulta fica confidencial?</summary><p>Sim. Tudo o que partilhar está protegido pelo sigilo profissional. Só em situações excecionais previstas na lei e no código deontológico, como um risco grave para si ou para outras pessoas, poderia ser necessário quebrar o sigilo. Se tiver dúvidas, falamos disso logo na primeira consulta.</p></details>
     <details><summary>O psicólogo receita medicação?</summary><p>Não. Sou psicólogo e trabalho através da conversa e de técnicas psicológicas, não prescrevo medicação. Se, em algum momento, fizer sentido uma avaliação médica, falamos disso e articulamos com o seu médico, se assim o desejar.</p></details>
     <details><summary>Quantas sessões vou precisar?</summary><p>Depende do que o/a trouxe e dos seus objetivos, por isso não há um número igual para todos. Na primeira consulta falamos sobre isso e vamos rever o caminho juntos ao longo do processo.</p></details>
-    <details><summary>Quanto custa e há alternativas se for difícil pagar?</summary><p>A sessão custa 40 €. Para quem tem dificuldades financeiras, existem vagas sociais a 25 € por sessão. Se o custo for uma preocupação, pode dizê-lo no pedido de consulta ou falar comigo diretamente.</p></details>
+    <details><summary>Quanto custa e há alternativas se for difícil pagar?</summary><p>A sessão custa 45 €. Para quem tem dificuldades financeiras, existem vagas sociais a 30 € por sessão. Se o custo for uma preocupação, pode dizê-lo no pedido de consulta ou falar comigo diretamente.</p></details>
   </div>
 
   <p class="note" style="margin-top:2rem"><strong>Prefere falar diretamente?</strong> Telefone: <a href="tel:+351913129675">+351 913 129 675</a> · Email: <a href="mailto:dariopaiva7@gmail.com">dariopaiva7@gmail.com</a> · Horário: das 10h às 19h · Atendimento exclusivamente online.</p>
-  <p class="note"><strong>Em situação de crise ou risco de vida:</strong> ligue 112, a Linha 1411 (linha nacional de prevenção do suicídio) ou a linha SNS 24 (808 24 24 24, opção de saúde mental). Este site não substitui apoio de emergência.</p>
+  <div class="sos" role="note" aria-label="Linhas de apoio em situação de crise">
+    <h3>Precisa de ajuda agora?</h3>
+    <p>Se está a passar por um momento de crise ou tem pensamentos de pôr fim à vida, não espere pela consulta. Pode ligar já, a qualquer hora, para:</p>
+    <div class="soslist">
+      <a href="tel:112"><strong>112</strong><span>Emergência</span></a>
+      <a href="tel:1411"><strong>1411</strong><span>Linha nacional de prevenção do suicídio</span></a>
+      <a href="tel:808242424"><strong>808 24 24 24</strong><span>SNS 24, opção de saúde mental</span></a>
+    </div>
+    <p class="sosnote">Este site não substitui apoio de emergência. Se achar que alguém corre perigo imediato, ligue 112.</p>
+  </div>
 </div></section>
 </main>
 
-<footer><div class="wrap">© 2026 Dario Paiva · Psicólogo · Cédula n.º 029733 OPP · Prática afirmativa e inclusiva · <a href="#topo">Voltar ao topo</a></div></footer>
+<footer><div class="wrap">© 2026 Dario Paiva · Psicólogo · Cédula n.º 029733 OPP · Prática afirmativa e inclusiva · Em crise: <a href="tel:112">112</a> · <a href="tel:1411">1411</a> · <a href="tel:808242424">SNS 24</a> · <a href="#topo">Voltar ao topo</a></div></footer>
 <script>
 document.documentElement.classList.add('js');
 (function(){
